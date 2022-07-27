@@ -1,0 +1,2 @@
+<input type="file" accept=".jpg,.png,.jpeg" class="button" (change)="uploadImage($event)" />
+<img [src]="imageBase64" *ngIf="isImage" width="500px">

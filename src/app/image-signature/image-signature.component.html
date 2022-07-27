@@ -1,0 +1,24 @@
+<h1>Firma digital</h1>
+<div class="signature-digital">
+    <div class="signature-digital-body">
+        <canvas #signature></canvas>
+        <app-file-dropper (image)="removeBackgroundImage($event)"></app-file-dropper>
+    </div>
+    <image-cropper 
+      [imageBase64]="imgBase64" 
+      [maintainAspectRatio]="true" 
+      [aspectRatio]="4 / 2"
+      [resizeToWidth]="256" 
+      format="png" 
+      (imageCropped)="cropImg($event)" 
+      (imageLoaded)="imgLoad()"
+      (cropperReady)="initCropper()" 
+      (loadImageFailed)="imgFailed()">
+    </image-cropper>
+</div>
+<div>
+
+    <button (click)="cutImage()">Recortar imagen</button>
+    <button (click)="download()">Descargar imagen</button>
+    <button (click)="save()">Guardar recorte de imagen</button>
+</div>

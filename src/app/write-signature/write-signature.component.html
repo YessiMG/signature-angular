@@ -1,0 +1,14 @@
+<h1>Firma digital</h1>
+<div class="signature-digital">
+    <div class="signature-digital-body">
+        &nbsp;Firma digital:
+        <canvas #signature width="500px" height="100px" style="touch-action: none;">
+
+        </canvas>
+    </div>
+</div>
+<div>
+    <button (click)="cleanSignature()">Borrar firma</button>
+    <button (click)="undoSignature()">Deshacer</button>
+    <button (click)="save()">Guardar firma</button>
+</div>
